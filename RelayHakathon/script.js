@@ -36,7 +36,10 @@ backBtn.onclick = () => showPage('homePage');
 
 function openArticle(id) {
   const article = articles[i];
-  const content = document.getElementById(id).articles;
+  articles.forEach(article =>{
+    article.style.visibility = 'hidden';
+  });
+  const content = document.getElementById(id).style.display = 'visible';
   content.innerHTML = `<h2>${article.title}</h2>${article.content}`;
   showPage('articlePage');
 }
